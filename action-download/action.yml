@@ -1,0 +1,23 @@
+name: "frank-dspeed/package/action-download"
+description: "Fetch something from a URL, and save it in a directory"
+inputs:
+  url:
+    description: "The url"
+    required: true
+    default: ""
+  target:
+    description: "Target file destinationDirectory"
+    required: true
+    default: "."
+  auto-match:
+    description: 'Match the first URL from "url"'
+    required: false
+    default: "false"
+outputs:
+  filename:
+    description: "Written filename"
+  path:
+    description: "Written path/filename"
+runs:
+  using: node17
+  main: ./action-download.js

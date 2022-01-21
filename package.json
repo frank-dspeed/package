@@ -1,0 +1,25 @@
+{
+    "type":"module",
+    "version": "1.0.0",
+    "author": "Frank Lemanschik <frank@lemanschik.com>",
+    "license": "Apache-2.0",
+    "private": true,
+    "dependencies": {},
+    "devDependencies": {
+        "@actions/core": "^1.6.0",
+        "@actions/github": "^5.0.0",
+        "node-fetch": "^3.2.0",
+        "@vercel/ncc": "^0.33.1"
+    },
+    "name": "@frank-dspeed/package",
+    "scripts": {
+      "build": "export NODE_OPTIONS=--openssl-legacy-provider && ncc build modules/download.js -o lib"
+    },
+    "keywords": [
+      "github",
+      "actions"
+    ],
+    
+    "description": "Cross Platform Packaging Utils written using NodeJS containing also github actions",
+    "repository": "git@github.com:frank-dspeed/package.git"
+  }
