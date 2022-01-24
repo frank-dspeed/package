@@ -1,0 +1,17 @@
+{
+    "extends": "../tsconfig.json",
+    "include": ["./**/*","./**/*.d.ts","../modules/**/*.js","../src/**/*.js","../action-*/**/*"],
+    "exclude": [""],
+    "compilerOptions": {
+        "types": ["./actions-core.d.ts","@types/node"],
+        "moduleResolution": "classic",
+        "declaration": true, 
+        "composite": true,
+        "noEmit":  true,
+        "allowJs": true,
+        "checkJs": true,
+        "noLib": false,
+        "noResolve": false,
+        "noImplicitAny": false
+    }
+}

@@ -2,7 +2,7 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import fetch from '../lib/node-fetch.js';
 
-export const createTargetDirectoryAndDownloadFile = async (url, filename, targetDirectory) => {
+export const createTargetDirectoryAndDownloadFile = async (/** @type {string} */ url, /** @type {string} */ filename, /** @type {string} */ targetDirectory) => {
     await mkdir(targetDirectory, { recursive: true, })
         .catch(e=>Promise.reject(`Failed to create targetDirectory directory ${targetDirectory}: ${e}`));
     

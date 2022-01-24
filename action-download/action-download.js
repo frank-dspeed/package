@@ -3,6 +3,9 @@ import {
     createTargetDirectoryAndDownloadFile
 } from '../modules/download.js';
 
+/**
+ * @param {string | URL} url
+ */
 function getFilenameFromUrl(url) {
     const { pathname } = new URL(url);
     const pathClips = pathname.split("/");
@@ -31,7 +34,7 @@ const getSettings = () => {
     return { url, filename: finalFilename, targetDirectory}
 }
 
-const objToOutput = (obj) => Object.keys(obj).forEach(key=>core.setOutput(key, obj[key]));
+const objToOutput = (/** @type {{ [x: string]: any; filename?: string; path?: string; }} */ obj) => Object.keys(obj).forEach(key=>core.setOutput(key, obj[key]));
 
 async function main() {
   const { url, filename, targetDirectory } = getSettings();
